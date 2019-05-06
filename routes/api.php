@@ -13,10 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 /*
  * Welcome route - link to any public API documentation here
  */
@@ -28,6 +24,6 @@ Route::get('/', function () {
  * @var $api \Dingo\Api\Routing\Router
  */
 $api = app('Dingo\Api\Routing\Router');
-$api->version('v1', ['middleware' => ['api']], function ($api) {
+$api->version('v1', function ($api) {
     $api->get('xoom/{country}', 'App\Http\Controllers\XoomController@rate');
 });

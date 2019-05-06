@@ -1,4 +1,6 @@
 <?php
+namespace App\Http\Controllers;
+
 class XoomController.php extends Controller
 {
     /**
@@ -16,7 +18,7 @@ class XoomController.php extends Controller
      */
     public static $transformer = null;
 
-    public function rate($country) {
+    public function rate(Request $request, $country) {
         /* Use internal libxml errors -- turn on in production, off for debugging */
         libxml_use_internal_errors(true);
         /* Createa a new DomDocument object */

@@ -31,4 +31,3 @@ $api = app('Dingo\Api\Routing\Router');
 $api->version('v1', ['middleware' => ['api']], function ($api) {
     $api->get('xoom/{country}', 'App\Http\Controllers\XoomController@rate');
 });
-});

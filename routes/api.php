@@ -20,6 +20,8 @@ Route::get('/', function () {
     echo 'Welcome to ArepasApp API';
 });
 
+Route::get('/xoom/{country}', 'App\Http\Controllers\XoomController@rate');
+
 /**
  * @var $api \Dingo\Api\Routing\Router
  */

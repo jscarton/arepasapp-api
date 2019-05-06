@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-class XoomController.php extends Controller
+class XoomController extends Controller
 {
     /**
      * @var BaseModel The primary model associated with this controller

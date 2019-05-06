@@ -19,23 +19,22 @@ class XoomController extends Controller
     public static $transformer = null;
 
     public function rate($country) {
-        /* Use internal libxml errors -- turn on in production, off for debugging 
+        Use internal libxml errors -- turn on in production, off for debugging 
         libxml_use_internal_errors(true);
-        /* Createa a new DomDocument object 
+        /* Createa a new DomDocument object*/ 
         $dom = new DomDocument;
-        /* Load the HTML 
-        $dom->loadHTMLFile("https://forums.eveonline.com");
-        /* Create a new XPath object 
+        /* Load the HTML */
+        $dom->loadHTMLFile("https://www.xoom.com/".$country."/send-money");
+        /* Create a new XPath object */
         $xpath = new DomXPath($dom);
-        /* Query all <td> nodes containing specified class name 
-        $nodes = $xpath->query("//td[@class='topicViews']");
-        /* Set HTTP response header to plain text for debugging output 
+        /* Query all <td> nodes containing specified class name */
+        $nodes = $xpath->query("//div[@id='js-exchange-rate']/p/text()");
+        /* Set HTTP response header to plain text for debugging output */
         header("Content-type: text/plain");
-        /* Traverse the DOMNodeList object to output each DomNode's nodeValue *
+        /* Traverse the DOMNodeList object to output each DomNode's nodeValue */
         foreach ($nodes as $i => $node) {
             echo "Node($i): ", $node->nodeValue, "\n";
-        }*/
-        echo "HELLO WORLD";
+        }
         exit;
     }
 }

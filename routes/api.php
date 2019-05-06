@@ -25,7 +25,7 @@ Route::get('/xoom/{country}', '\App\Http\Controllers\XoomController@rate');
 /**
  * @var $api \Dingo\Api\Routing\Router
  */
-$api = app('Dingo\Api\Routing\Router');
+/*$api = app('Dingo\Api\Routing\Router');
 $api->version('v1', function ($api) {
     $api->get('xoom/{country}', '\App\Http\Controllers\XoomController@rate');
-});
+});*/

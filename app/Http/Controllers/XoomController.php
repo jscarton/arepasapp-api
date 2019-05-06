@@ -18,7 +18,7 @@ class XoomController extends Controller
      */
     public static $transformer = null;
 
-    public function rate(Request $request, $country) {
+    public function rate($country) {
         /* Use internal libxml errors -- turn on in production, off for debugging 
         libxml_use_internal_errors(true);
         /* Createa a new DomDocument object 
